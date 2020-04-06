@@ -1,0 +1,17 @@
+{
+  "name": "IAFD Search",
+  "description": "Search selected text on iafd.com",
+  "version": "1.0",
+  "manifest_version": 2,
+  "permissions": ["contextMenus"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "icons": {
+   "32": "icon_32.png",
+    "64": "icon_64.png"
+ },
+ "homepage_url" : "https://github.com/difabiolorenzo/iafdFinder",
+ "offline_enabled": false
+}
