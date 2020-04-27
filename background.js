@@ -7,8 +7,8 @@
 // context menu items only need to be created at runtime.onInstalled
 chrome.runtime.onInstalled.addListener(function() {
     chrome.contextMenus.create({
-        id: "iafd_search_context_menu",
-        title: "Search on iafd.com",
+        id: "wiktionary_search_context_menu",
+        title: "Search on wiktionary.org",
         type: 'normal',
         contexts: ['selection'],
       });
@@ -16,6 +16,6 @@ chrome.runtime.onInstalled.addListener(function() {
 
 chrome.contextMenus.onClicked.addListener(function(item, tab) {
   let url =
-    'http://www.iafd.com/results.asp?searchtype=comprehensive&searchstring=' + item.selectionText;
+    'https://fr.wiktionary.org/w/index.php?search=' + item.selectionText.toLowerCase();
   chrome.tabs.create({url: url, index: tab.index + 1});
 });
