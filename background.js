@@ -8,7 +8,7 @@
 chrome.runtime.onInstalled.addListener(function() {
     chrome.contextMenus.create({
         id: "wiktionary_search_context_menu",
-        title: "Search on wiktionary.org",
+        title: "Chercher sur wiktionary.org",
         type: 'normal',
         contexts: ['selection'],
       });
